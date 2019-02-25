@@ -1,8 +1,11 @@
 {
-  "name": "brain-games-snc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "sncorp04",
+  "version": "1.0.4",
+  "description": "Brain Games its first project of Hexlet",
+  "keywords": [
+    "brain",
+    "hexlet"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -10,7 +13,6 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
