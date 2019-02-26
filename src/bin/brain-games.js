@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import welcomeMsg from '../index';
+import welcomeMsg from '..';
 
 welcomeMsg();
