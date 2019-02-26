@@ -4,7 +4,7 @@ const randNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 const game = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".\n');
-  const name = readlineSync.question('May I have your name?');
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
   let count = 1;
   const numIter = 3;
