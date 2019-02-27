@@ -1,5 +1,4 @@
 import { cons } from 'hexlet-pairs';
-import game from '../flowGame';
 
 const randNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 const conditionGame = () => {
@@ -23,5 +22,5 @@ const conditionGame = () => {
   return condition;
 };
 const description = 'What is the result of the expression?';
-const calc = () => game(description);
-export { conditionGame, calc };
+const calc = cons(description, conditionGame);
+export default calc;

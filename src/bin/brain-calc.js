@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import game from '../games/even';
 import gamePattern from '../flowGame';
+import calc from '../games/calc';
 
-gamePattern(game);
+gamePattern(calc);

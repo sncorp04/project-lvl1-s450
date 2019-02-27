@@ -1,14 +1,15 @@
 import { car, cdr } from 'hexlet-pairs';
 import readlineSync from 'readline-sync';
-import { conditionGame } from './games/calc';
 
-const game = (descGame) => {
+const gamePattern = (conditionGame) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${descGame}\n`);
+  const description = car(conditionGame);
+  console.log(`${description}\n`);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
-  for (let round = 1; round <= 3; round += 1) {
-    const condGame = conditionGame();
+  const roundNum = 3;
+  for (let round = 1; round <= roundNum; round += 1) {
+    const condGame = cdr(conditionGame)();
     const condition = car(condGame);
     const correct = cdr(condGame);
     console.log(`Question: ${condition}`);
@@ -22,4 +23,4 @@ const game = (descGame) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-export default game;
+export default gamePattern;
