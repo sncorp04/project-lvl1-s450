@@ -8,4 +8,5 @@
 <a href="https://asciinema.org/a/230257" target="_blank"><img src="https://asciinema.org/a/230257.svg" /></a>
 <h2> How to install and Play Brain-gcd</h2>
 <a href="https://asciinema.org/a/230329" target="_blank"><img src="https://asciinema.org/a/230329.svg" /></a>
-
+<h2> How to install and Play Brain-progression</h2>
+<a href="https://asciinema.org/a/230356" target="_blank"><img src="https://asciinema.org/a/230356.svg" /></a>
