@@ -5,4 +5,7 @@
 <h2> How to install and Play Brain-even</h2>
 <a href="https://asciinema.org/a/230058" target="_blank"><img src="https://asciinema.org/a/230058.svg" /></a>
 <h2> How to install and Play Brain-calc</h2>
-<a href="https://asciinema.org/a/HOMT59o3p9HNlpb5zI6Pvbn7Y" target="_blank"><img src="https://asciinema.org/a/HOMT59o3p9HNlpb5zI6Pvbn7Y.svg" /></a>
+<a href="https://asciinema.org/a/230257" target="_blank"><img src="https://asciinema.org/a/230257.svg" /></a>
+<h2> How to install and Play Brain-gcd</h2>
+<a href="https://asciinema.org/a/230329" target="_blank"><img src="https://asciinema.org/a/230329.svg" /></a>
+
