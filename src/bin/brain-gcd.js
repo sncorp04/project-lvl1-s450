@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import game from '../games/gcd';
-import gamePattern from '../flowGame';
+import gameGcd from '../games/gcd';
 
-gamePattern(game);
+gameGcd();

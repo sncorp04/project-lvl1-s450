@@ -1,12 +1,14 @@
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
+import gamePattern from '../flowGame';
 
-const randNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 const isEven = number => number % 2 === 0;
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const conditionGame = () => {
-  const question = randNum(1, 30);
-  const corrAnswer = isEven(question) ? 'yes' : 'no';
-  return cons(question, corrAnswer);
+  const question = randomNumber(1, 30);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
-const game = cons(description, conditionGame);
-export default game;
+const even = cons(description, conditionGame);
+const gameEven = () => gamePattern(even);
+export default gameEven;

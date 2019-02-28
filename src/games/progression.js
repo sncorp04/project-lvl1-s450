@@ -1,23 +1,25 @@
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
+import gamePattern from '../flowGame';
 
-const randNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
-const progressionStr = (first, step, miss) => {
+const progressionLength = 10;
+const progressionStr = (first, step, hidden) => {
   let string = '';
-  const numOfDig = 10;
-  for (let count = 1, digit = first; count <= numOfDig; count += 1) {
-    string = `${string}${count === miss ? '..' : digit} `;
+  for (let count = 0, digit = first; count < progressionLength; count += 1) {
+    string = `${string}${count === hidden ? '..' : digit} `;
     digit += step;
   }
-  return string;
+  return string.trim();
 };
 const conditionGame = () => {
-  const firstIndex = Math.abs(randNum(1, 10));
-  const step = randNum(1, 10);
-  const indexMiss = Math.abs(randNum(1, 10));
-  const condition = progressionStr(firstIndex, step, indexMiss);
-  const corrAnswer = firstIndex + step * (indexMiss - 1);
-  return cons(condition, corrAnswer);
+  const firstElement = randomNumber(1, 10);
+  const step = randomNumber(1, 10);
+  const hiddenElementPosition = randomNumber(0, progressionLength - 1);
+  const question = progressionStr(firstElement, step, hiddenElementPosition);
+  const correctAnswer = firstElement + step * hiddenElementPosition;
+  return cons(question, correctAnswer);
 };
 const description = 'What number is missing in the progression?';
-const game = cons(description, conditionGame);
-export default game;
+const progression = cons(description, conditionGame);
+const gameProgression = () => gamePattern(progression);
+export default gameProgression;
