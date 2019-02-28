@@ -24,9 +24,7 @@ const conditionGame = () => {
     default:
       break;
   }
-  return cons(question, correctAnswer);
+  return cons(question, String(correctAnswer));
 };
 const description = 'What is the result of the expression?';
-const calc = cons(description, conditionGame);
-const gameCalc = () => gamePattern(calc);
-export default gameCalc;
+export default () => gamePattern(description, conditionGame);

@@ -16,9 +16,7 @@ const conditionGame = () => {
   const number2 = randomNumber(1, 100);
   const question = `${number1} ${number2}`;
   const correctAnswer = gcd(number1, number2);
-  return cons(question, correctAnswer);
+  return cons(question, String(correctAnswer));
 };
 const description = 'Find the gratest common divisor of given numbers';
-const game = cons(description, conditionGame);
-const gameGcd = () => gamePattern(game);
-export default gameGcd;
+export default () => gamePattern(description, conditionGame);

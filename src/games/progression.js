@@ -17,9 +17,7 @@ const conditionGame = () => {
   const hiddenElementPosition = randomNumber(0, progressionLength - 1);
   const question = progressionStr(firstElement, step, hiddenElementPosition);
   const correctAnswer = firstElement + step * hiddenElementPosition;
-  return cons(question, correctAnswer);
+  return cons(question, String(correctAnswer));
 };
 const description = 'What number is missing in the progression?';
-const progression = cons(description, conditionGame);
-const gameProgression = () => gamePattern(progression);
-export default gameProgression;
+export default () => gamePattern(description, conditionGame);
