@@ -4,7 +4,7 @@ import gamePattern from '../flowGame';
 
 const isPrime = (number) => {
   const iter = (count, acc) => {
-    if (count === number || acc) {
+    if (count >= number / 2 || acc) {
       return !acc;
     }
     const newAcc = number < 2 || number % count === 0;

@@ -6,8 +6,8 @@ const gcd = (numberOne, numberTwo) => {
   if (numberOne === numberTwo) {
     return numberOne;
   }
-  const firstNumber = numberOne > numberTwo ? numberOne - numberTwo : numberOne;
-  const secondNumber = numberTwo > numberOne ? numberTwo - numberOne : numberTwo;
+  const firstNumber = Math.abs(numberOne - numberTwo);
+  const secondNumber = numberTwo > numberOne ? numberOne : numberTwo;
   return gcd(firstNumber, secondNumber);
 };
 const conditionGame = () => {
