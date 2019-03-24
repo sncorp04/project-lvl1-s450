@@ -1,16 +1,16 @@
 import { car, cdr } from 'hexlet-pairs';
 import readlineSync from 'readline-sync';
 
-export default (description, conditionGame) => {
+export default (description, getQuestionAndCorrectAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}\n`);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
   const roundNum = 3;
-  for (let round = 1; round <= roundNum; round += 1) {
-    const condition = conditionGame();
-    const question = car(condition);
-    const correctAnswer = cdr(condition);
+  const rounds = (round) => {
+    const questionAndCorrectAnswer = getQuestionAndCorrectAnswer();
+    const question = car(questionAndCorrectAnswer);
+    const correctAnswer = cdr(questionAndCorrectAnswer);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {
@@ -19,6 +19,11 @@ export default (description, conditionGame) => {
       return;
     }
     console.log('Correct!');
-  }
-  console.log(`Congratulations, ${name}!`);
+    if (round >= roundNum) {
+      console.log(`Congratulations, ${name}!`);
+      return;
+    }
+    rounds(round + 1);
+  };
+  return rounds(1);
 };

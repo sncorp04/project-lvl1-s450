@@ -2,14 +2,13 @@ import { cons } from 'hexlet-pairs';
 import randomNumber from '../utils';
 import gamePattern from '../flowGame';
 
-const gcd = (number1, number2) => {
-  let firstNum = number1;
-  let secondNum = number2;
-  while (firstNum !== secondNum) {
-    if (firstNum > secondNum) firstNum -= secondNum;
-    else secondNum -= firstNum;
+const gcd = (numberOne, numberTwo) => {
+  if (numberOne === numberTwo) {
+    return numberOne;
   }
-  return firstNum;
+  const firstNumber = numberOne > numberTwo ? numberOne - numberTwo : numberOne;
+  const secondNumber = numberTwo > numberOne ? numberTwo - numberOne : numberTwo;
+  return gcd(firstNumber, secondNumber);
 };
 const conditionGame = () => {
   const number1 = randomNumber(1, 100);
